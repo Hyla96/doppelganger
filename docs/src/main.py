@@ -12,7 +12,7 @@ src_path = Path(__file__).parent
 sys.path.insert(0, str(src_path))
 
 OUTPUT_DIRECTORY = "diagrams"
-FILE_EXTENTION = "svg"
+FILE_EXTENTION = "jpg"
 
 
 _GENERATORS = [
