@@ -2,4 +2,4 @@
 
 ### Components Architecture
 
-![Components Architecture](diagrams/components_architecture.jpg)
+![Components Architecture](docs/diagrams/components_architecture.jpg)
