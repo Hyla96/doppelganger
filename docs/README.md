@@ -14,4 +14,4 @@ Setup venv:
 
 Generate diagrams:
 
-- `$ uv run src/main.py`
+- `$ make generate`
