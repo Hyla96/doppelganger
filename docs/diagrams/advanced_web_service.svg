@@ -25,199 +25,199 @@
 <path fill="#e5f5fd" stroke="#aeb6be" d="M315.6,-211.75C315.6,-211.75 596.95,-211.75 596.95,-211.75 602.95,-211.75 608.95,-217.75 608.95,-223.75 608.95,-223.75 608.95,-372.75 608.95,-372.75 608.95,-378.75 602.95,-384.75 596.95,-384.75 596.95,-384.75 315.6,-384.75 315.6,-384.75 309.6,-384.75 303.6,-378.75 303.6,-372.75 303.6,-372.75 303.6,-223.75 303.6,-223.75 303.6,-217.75 309.6,-211.75 315.6,-211.75"/>
 <text xml:space="preserve" text-anchor="middle" x="347.6" y="-369.35" font-family="Sans-Serif" font-size="12.00" fill="#2d3436">Database HA</text>
 </g>
-<!-- 4328cf554434469fb45c4544028d64eb -->
+<!-- 0d1cd5301ab34716beaaccac0cdb47e2 -->
 <g id="node1" class="node">
-<title>4328cf554434469fb45c4544028d64eb</title>
+<title>0d1cd5301ab34716beaaccac0cdb47e2</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/network/nginx.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="-2.84217e-14" y="-338.15"/>
 <text xml:space="preserve" text-anchor="middle" x="50.4" y="-220.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">ingress</text>
 </g>
-<!-- 1fb5491b71d14b82a8d4a2bd93c0ba91 -->
+<!-- 413dbab2a4d94fae83e3dc6d4b56d0cd -->
 <g id="node4" class="node">
-<title>1fb5491b71d14b82a8d4a2bd93c0ba91</title>
+<title>413dbab2a4d94fae83e3dc6d4b56d0cd</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/compute/server.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="155.8" y="-518.15"/>
 <text xml:space="preserve" text-anchor="middle" x="206.2" y="-400.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">grpc1</text>
 </g>
-<!-- 4328cf554434469fb45c4544028d64eb&#45;&gt;1fb5491b71d14b82a8d4a2bd93c0ba91 -->
+<!-- 0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;413dbab2a4d94fae83e3dc6d4b56d0cd -->
 <g id="edge14" class="edge">
-<title>4328cf554434469fb45c4544028d64eb&#45;&gt;1fb5491b71d14b82a8d4a2bd93c0ba91</title>
+<title>0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;413dbab2a4d94fae83e3dc6d4b56d0cd</title>
 <path fill="none" stroke="darkgreen" d="M50.8,-367.57C50.8,-367.57 50.8,-467.75 50.8,-467.75 50.8,-467.75 144.66,-467.75 144.66,-467.75"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="54.3,-367.57 50.8,-357.57 47.3,-367.57 54.3,-367.57"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="144.66,-471.25 154.66,-467.75 144.66,-464.25 144.66,-471.25"/>
 </g>
-<!-- def92eff39ea4686aac420e238756dc9 -->
+<!-- f845a5f0e348484a80f58d92ea9f043d -->
 <g id="node5" class="node">
-<title>def92eff39ea4686aac420e238756dc9</title>
+<title>f845a5f0e348484a80f58d92ea9f043d</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/compute/server.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="155.8" y="-338.15"/>
 <text xml:space="preserve" text-anchor="middle" x="206.2" y="-220.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">grpc2</text>
 </g>
-<!-- 4328cf554434469fb45c4544028d64eb&#45;&gt;def92eff39ea4686aac420e238756dc9 -->
+<!-- 0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;f845a5f0e348484a80f58d92ea9f043d -->
 <g id="edge15" class="edge">
-<title>4328cf554434469fb45c4544028d64eb&#45;&gt;def92eff39ea4686aac420e238756dc9</title>
+<title>0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;f845a5f0e348484a80f58d92ea9f043d</title>
 <path fill="none" stroke="darkgreen" d="M112.07,-287.75C112.07,-287.75 144.36,-287.75 144.36,-287.75"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="112.07,-284.25 102.07,-287.75 112.07,-291.25 112.07,-284.25"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="144.36,-291.25 154.36,-287.75 144.36,-284.25 144.36,-291.25"/>
 </g>
-<!-- 54bd82aa81a94150af9865b2d2783a39 -->
+<!-- 61eed65f2e134123b9414e58e9050658 -->
 <g id="node6" class="node">
-<title>54bd82aa81a94150af9865b2d2783a39</title>
+<title>61eed65f2e134123b9414e58e9050658</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/compute/server.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="155.8" y="-158.15"/>
 <text xml:space="preserve" text-anchor="middle" x="206.2" y="-40.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">grpc3</text>
 </g>
-<!-- 4328cf554434469fb45c4544028d64eb&#45;&gt;54bd82aa81a94150af9865b2d2783a39 -->
+<!-- 0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;61eed65f2e134123b9414e58e9050658 -->
 <g id="edge16" class="edge">
-<title>4328cf554434469fb45c4544028d64eb&#45;&gt;54bd82aa81a94150af9865b2d2783a39</title>
+<title>0d1cd5301ab34716beaaccac0cdb47e2&#45;&gt;61eed65f2e134123b9414e58e9050658</title>
 <path fill="none" stroke="darkgreen" d="M50.8,-207.93C50.8,-207.93 50.8,-107.75 50.8,-107.75 50.8,-107.75 144.66,-107.75 144.66,-107.75"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="47.3,-207.93 50.8,-217.93 54.3,-207.93 47.3,-207.93"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="144.66,-111.25 154.66,-107.75 144.66,-104.25 144.66,-111.25"/>
 </g>
-<!-- c085a84c5ee247628b61bbb8cca27e62 -->
+<!-- a40189831b104e568f421b36fa7d46e7 -->
 <g id="node2" class="node">
-<title>c085a84c5ee247628b61bbb8cca27e62</title>
+<title>a40189831b104e568f421b36fa7d46e7</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/monitoring/prometheus.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="693.2" y="-429.15"/>
 <text xml:space="preserve" text-anchor="middle" x="743.6" y="-311.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">metric</text>
 </g>
-<!-- 742bfd62563a4e78b5d3261deda5ef4a -->
+<!-- 5ba22c91608642ff97561290313b5823 -->
 <g id="node3" class="node">
-<title>742bfd62563a4e78b5d3261deda5ef4a</title>
+<title>5ba22c91608642ff97561290313b5823</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/monitoring/grafana.png" width="100.8px" height="104.737px" preserveAspectRatio="xMinYMin meet" x="849" y="-431.119"/>
 <text xml:space="preserve" text-anchor="middle" x="899.4" y="-311.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">monitoring</text>
 </g>
-<!-- c085a84c5ee247628b61bbb8cca27e62&#45;&gt;742bfd62563a4e78b5d3261deda5ef4a -->
+<!-- a40189831b104e568f421b36fa7d46e7&#45;&gt;5ba22c91608642ff97561290313b5823 -->
 <g id="edge1" class="edge">
-<title>c085a84c5ee247628b61bbb8cca27e62&#45;&gt;742bfd62563a4e78b5d3261deda5ef4a</title>
+<title>a40189831b104e568f421b36fa7d46e7&#45;&gt;5ba22c91608642ff97561290313b5823</title>
 <path fill="none" stroke="firebrick" stroke-dasharray="5,2" d="M805.27,-378.75C805.27,-378.75 849.07,-378.75 849.07,-378.75"/>
 <polygon fill="firebrick" stroke="firebrick" points="805.27,-375.25 795.27,-378.75 805.27,-382.25 805.27,-375.25"/>
 </g>
-<!-- f674bc2228594c6e97c8c20c31c04602 -->
+<!-- 497cd7eebbd74fbe875ff5c18ecf5920 -->
 <g id="node7" class="node">
-<title>f674bc2228594c6e97c8c20c31c04602</title>
+<title>497cd7eebbd74fbe875ff5c18ecf5920</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/inmemory/redis.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="311.6" y="-519.15"/>
 <text xml:space="preserve" text-anchor="middle" x="362" y="-401.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">session</text>
 </g>
-<!-- 1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;f674bc2228594c6e97c8c20c31c04602 -->
+<!-- 413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920 -->
 <g id="edge4" class="edge">
-<title>1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;f674bc2228594c6e97c8c20c31c04602</title>
+<title>413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920</title>
 <path fill="none" stroke="brown" d="M256.35,-502.2C256.35,-502.2 300.16,-502.2 300.16,-502.2"/>
 <polygon fill="brown" stroke="brown" points="300.16,-505.7 310.16,-502.2 300.16,-498.7 300.16,-505.7"/>
 </g>
-<!-- abaeee3994294af5aab379e4dc63c38c -->
+<!-- 0e45092dbce94ff8b341238bc63ffce7 -->
 <g id="node9" class="node">
-<title>abaeee3994294af5aab379e4dc63c38c</title>
+<title>0e45092dbce94ff8b341238bc63ffce7</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/database/postgresql.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="311.6" y="-338.15"/>
 <text xml:space="preserve" text-anchor="middle" x="362" y="-220.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">users</text>
 </g>
-<!-- 1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;abaeee3994294af5aab379e4dc63c38c -->
+<!-- 413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;0e45092dbce94ff8b341238bc63ffce7 -->
 <g id="edge9" class="edge">
-<title>1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;abaeee3994294af5aab379e4dc63c38c</title>
+<title>413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;0e45092dbce94ff8b341238bc63ffce7</title>
 <path fill="none" stroke="black" d="M189.8,-399.37C189.8,-390.79 189.8,-384.95 189.8,-384.95 189.8,-384.95 378.8,-384.95 378.8,-384.95 378.8,-384.95 378.8,-367.56 378.8,-367.56"/>
 <polygon fill="black" stroke="black" points="382.3,-367.56 378.8,-357.56 375.3,-367.56 382.3,-367.56"/>
 </g>
-<!-- 72342febcbef4e1ca2b7aef8953ef9aa -->
+<!-- 9d61f072db3648898b05d94fff661297 -->
 <g id="node11" class="node">
-<title>72342febcbef4e1ca2b7aef8953ef9aa</title>
+<title>9d61f072db3648898b05d94fff661297</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/aggregator/fluentd.png" width="100.8px" height="83.0812px" preserveAspectRatio="xMinYMin meet" x="311.6" y="-149.291"/>
 <text xml:space="preserve" text-anchor="middle" x="362" y="-40.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">logging</text>
 </g>
-<!-- 1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa -->
+<!-- 413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;9d61f072db3648898b05d94fff661297 -->
 <g id="edge17" class="edge">
-<title>1fb5491b71d14b82a8d4a2bd93c0ba91&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa</title>
+<title>413dbab2a4d94fae83e3dc6d4b56d0cd&#45;&gt;9d61f072db3648898b05d94fff661297</title>
 <path fill="none" stroke="darkorange" d="M256.58,-468.25C275.63,-468.25 292.8,-468.25 292.8,-468.25 292.8,-468.25 292.8,-141.95 292.8,-141.95 292.8,-141.95 300.2,-141.95 300.2,-141.95"/>
 <polygon fill="darkorange" stroke="darkorange" points="300.2,-145.45 310.2,-141.95 300.2,-138.45 300.2,-145.45"/>
 </g>
-<!-- def92eff39ea4686aac420e238756dc9&#45;&gt;f674bc2228594c6e97c8c20c31c04602 -->
+<!-- f845a5f0e348484a80f58d92ea9f043d&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920 -->
 <g id="edge5" class="edge">
-<title>def92eff39ea4686aac420e238756dc9&#45;&gt;f674bc2228594c6e97c8c20c31c04602</title>
+<title>f845a5f0e348484a80f58d92ea9f043d&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920</title>
 <path fill="none" stroke="brown" d="M222.8,-356.13C222.8,-364.71 222.8,-370.55 222.8,-370.55 222.8,-370.55 344.8,-370.55 344.8,-370.55 344.8,-370.55 344.8,-389.03 344.8,-389.03"/>
 <polygon fill="brown" stroke="brown" points="341.3,-389.03 344.8,-399.03 348.3,-389.03 341.3,-389.03"/>
 </g>
-<!-- def92eff39ea4686aac420e238756dc9&#45;&gt;abaeee3994294af5aab379e4dc63c38c -->
+<!-- f845a5f0e348484a80f58d92ea9f043d&#45;&gt;0e45092dbce94ff8b341238bc63ffce7 -->
 <g id="edge10" class="edge">
-<title>def92eff39ea4686aac420e238756dc9&#45;&gt;abaeee3994294af5aab379e4dc63c38c</title>
+<title>f845a5f0e348484a80f58d92ea9f043d&#45;&gt;0e45092dbce94ff8b341238bc63ffce7</title>
 <path fill="none" stroke="black" d="M256.35,-287.75C256.35,-287.75 300.16,-287.75 300.16,-287.75"/>
 <polygon fill="black" stroke="black" points="300.16,-291.25 310.16,-287.75 300.16,-284.25 300.16,-291.25"/>
 </g>
-<!-- def92eff39ea4686aac420e238756dc9&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa -->
+<!-- f845a5f0e348484a80f58d92ea9f043d&#45;&gt;9d61f072db3648898b05d94fff661297 -->
 <g id="edge18" class="edge">
-<title>def92eff39ea4686aac420e238756dc9&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa</title>
+<title>f845a5f0e348484a80f58d92ea9f043d&#45;&gt;9d61f072db3648898b05d94fff661297</title>
 <path fill="none" stroke="darkorange" d="M189.8,-219.37C189.8,-210.79 189.8,-204.95 189.8,-204.95 189.8,-204.95 344.8,-204.95 344.8,-204.95 344.8,-204.95 344.8,-187.56 344.8,-187.56"/>
 <polygon fill="darkorange" stroke="darkorange" points="348.3,-187.56 344.8,-177.56 341.3,-187.56 348.3,-187.56"/>
 </g>
-<!-- 54bd82aa81a94150af9865b2d2783a39&#45;&gt;f674bc2228594c6e97c8c20c31c04602 -->
+<!-- 61eed65f2e134123b9414e58e9050658&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920 -->
 <g id="edge6" class="edge">
-<title>54bd82aa81a94150af9865b2d2783a39&#45;&gt;f674bc2228594c6e97c8c20c31c04602</title>
+<title>61eed65f2e134123b9414e58e9050658&#45;&gt;497cd7eebbd74fbe875ff5c18ecf5920</title>
 <path fill="none" stroke="brown" d="M256.42,-107.75C266.88,-107.75 274.8,-107.75 274.8,-107.75 274.8,-107.75 274.8,-434.3 274.8,-434.3 274.8,-434.3 300.27,-434.3 300.27,-434.3"/>
 <polygon fill="brown" stroke="brown" points="300.27,-437.8 310.27,-434.3 300.27,-430.8 300.27,-437.8"/>
 </g>
-<!-- 54bd82aa81a94150af9865b2d2783a39&#45;&gt;abaeee3994294af5aab379e4dc63c38c -->
+<!-- 61eed65f2e134123b9414e58e9050658&#45;&gt;0e45092dbce94ff8b341238bc63ffce7 -->
 <g id="edge11" class="edge">
-<title>54bd82aa81a94150af9865b2d2783a39&#45;&gt;abaeee3994294af5aab379e4dc63c38c</title>
+<title>61eed65f2e134123b9414e58e9050658&#45;&gt;0e45092dbce94ff8b341238bc63ffce7</title>
 <path fill="none" stroke="black" d="M222.8,-176.13C222.8,-184.71 222.8,-190.55 222.8,-190.55 222.8,-190.55 378.8,-190.55 378.8,-190.55 378.8,-190.55 378.8,-207.94 378.8,-207.94"/>
 <polygon fill="black" stroke="black" points="375.3,-207.94 378.8,-217.94 382.3,-207.94 375.3,-207.94"/>
 </g>
-<!-- 54bd82aa81a94150af9865b2d2783a39&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa -->
+<!-- 61eed65f2e134123b9414e58e9050658&#45;&gt;9d61f072db3648898b05d94fff661297 -->
 <g id="edge19" class="edge">
-<title>54bd82aa81a94150af9865b2d2783a39&#45;&gt;72342febcbef4e1ca2b7aef8953ef9aa</title>
+<title>61eed65f2e134123b9414e58e9050658&#45;&gt;9d61f072db3648898b05d94fff661297</title>
 <path fill="none" stroke="darkorange" d="M256.35,-73.55C256.35,-73.55 300.16,-73.55 300.16,-73.55"/>
 <polygon fill="darkorange" stroke="darkorange" points="300.16,-77.05 310.16,-73.55 300.16,-70.05 300.16,-77.05"/>
 </g>
-<!-- 7ac9759c03074f189bd6f36b72990886 -->
+<!-- f6db9d5b19a744bf926b9c83b5f27852 -->
 <g id="node8" class="node">
-<title>7ac9759c03074f189bd6f36b72990886</title>
+<title>f6db9d5b19a744bf926b9c83b5f27852</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/inmemory/redis.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="500.15" y="-519.15"/>
 <text xml:space="preserve" text-anchor="middle" x="550.55" y="-401.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">replica</text>
 </g>
-<!-- f674bc2228594c6e97c8c20c31c04602&#45;&gt;7ac9759c03074f189bd6f36b72990886 -->
+<!-- 497cd7eebbd74fbe875ff5c18ecf5920&#45;&gt;f6db9d5b19a744bf926b9c83b5f27852 -->
 <g id="edge2" class="edge">
-<title>f674bc2228594c6e97c8c20c31c04602&#45;&gt;7ac9759c03074f189bd6f36b72990886</title>
+<title>497cd7eebbd74fbe875ff5c18ecf5920&#45;&gt;f6db9d5b19a744bf926b9c83b5f27852</title>
 <path fill="none" stroke="brown" stroke-dasharray="5,2" d="M412.03,-468.75C439.31,-468.75 472.97,-468.75 500.28,-468.75"/>
 </g>
-<!-- 7ac9759c03074f189bd6f36b72990886&#45;&gt;c085a84c5ee247628b61bbb8cca27e62 -->
+<!-- f6db9d5b19a744bf926b9c83b5f27852&#45;&gt;a40189831b104e568f421b36fa7d46e7 -->
 <g id="edge3" class="edge">
-<title>7ac9759c03074f189bd6f36b72990886&#45;&gt;c085a84c5ee247628b61bbb8cca27e62</title>
+<title>f6db9d5b19a744bf926b9c83b5f27852&#45;&gt;a40189831b104e568f421b36fa7d46e7</title>
 <path fill="none" stroke="#7b8894" d="M612.28,-423.75C612.28,-423.75 693.3,-423.75 693.3,-423.75"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="612.28,-420.25 602.28,-423.75 612.28,-427.25 612.28,-420.25"/>
 <text xml:space="preserve" text-anchor="middle" x="647.07" y="-439.9" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">collect</text>
 </g>
-<!-- 9d820309c44b408087eb89420f5a8fb4 -->
+<!-- 0a8a9f5e69c2467b9b867d560b23783d -->
 <g id="node10" class="node">
-<title>9d820309c44b408087eb89420f5a8fb4</title>
+<title>0a8a9f5e69c2467b9b867d560b23783d</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/database/postgresql.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="500.15" y="-338.15"/>
 <text xml:space="preserve" text-anchor="middle" x="550.55" y="-220.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">replica</text>
 </g>
-<!-- abaeee3994294af5aab379e4dc63c38c&#45;&gt;9d820309c44b408087eb89420f5a8fb4 -->
+<!-- 0e45092dbce94ff8b341238bc63ffce7&#45;&gt;0a8a9f5e69c2467b9b867d560b23783d -->
 <g id="edge7" class="edge">
-<title>abaeee3994294af5aab379e4dc63c38c&#45;&gt;9d820309c44b408087eb89420f5a8fb4</title>
+<title>0e45092dbce94ff8b341238bc63ffce7&#45;&gt;0a8a9f5e69c2467b9b867d560b23783d</title>
 <path fill="none" stroke="brown" stroke-dasharray="1,5" d="M412.03,-287.75C439.31,-287.75 472.97,-287.75 500.28,-287.75"/>
 </g>
-<!-- 9d820309c44b408087eb89420f5a8fb4&#45;&gt;c085a84c5ee247628b61bbb8cca27e62 -->
+<!-- 0a8a9f5e69c2467b9b867d560b23783d&#45;&gt;a40189831b104e568f421b36fa7d46e7 -->
 <g id="edge8" class="edge">
-<title>9d820309c44b408087eb89420f5a8fb4&#45;&gt;c085a84c5ee247628b61bbb8cca27e62</title>
+<title>0a8a9f5e69c2467b9b867d560b23783d&#45;&gt;a40189831b104e568f421b36fa7d46e7</title>
 <path fill="none" stroke="#7b8894" d="M612.28,-333.25C612.28,-333.25 693.3,-333.25 693.3,-333.25"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="612.28,-329.75 602.28,-333.25 612.28,-336.75 612.28,-329.75"/>
 <text xml:space="preserve" text-anchor="middle" x="647.07" y="-318.9" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">collect</text>
 </g>
-<!-- 3b65cb3f41a14bee94f5a6980cd76d16 -->
+<!-- 6f517cfcbd6e491fa0bcb76c7972dbcb -->
 <g id="node12" class="node">
-<title>3b65cb3f41a14bee94f5a6980cd76d16</title>
+<title>6f517cfcbd6e491fa0bcb76c7972dbcb</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/queue/kafka.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="500.15" y="-158.15"/>
 <text xml:space="preserve" text-anchor="middle" x="550.55" y="-40.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">stream</text>
 </g>
-<!-- 72342febcbef4e1ca2b7aef8953ef9aa&#45;&gt;3b65cb3f41a14bee94f5a6980cd76d16 -->
+<!-- 9d61f072db3648898b05d94fff661297&#45;&gt;6f517cfcbd6e491fa0bcb76c7972dbcb -->
 <g id="edge12" class="edge">
-<title>72342febcbef4e1ca2b7aef8953ef9aa&#45;&gt;3b65cb3f41a14bee94f5a6980cd76d16</title>
+<title>9d61f072db3648898b05d94fff661297&#45;&gt;6f517cfcbd6e491fa0bcb76c7972dbcb</title>
 <path fill="none" stroke="#7b8894" d="M412.03,-107.75C412.03,-107.75 488.77,-107.75 488.77,-107.75"/>
 <polygon fill="#7b8894" stroke="#7b8894" points="488.77,-111.25 498.77,-107.75 488.77,-104.25 488.77,-111.25"/>
 <text xml:space="preserve" text-anchor="middle" x="456.27" y="-108.9" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">parse</text>
 </g>
-<!-- a6ec40dce33747669df3ae1c3b6f268b -->
+<!-- c708fddacbbb414d814011d419bbe355 -->
 <g id="node13" class="node">
-<title>a6ec40dce33747669df3ae1c3b6f268b</title>
+<title>c708fddacbbb414d814011d419bbe355</title>
 <image xlink:href="/Users/gabriel.costache/Development/other/doppelganger/docs/.venv/lib/python3.13/site-packages/resources/onprem/analytics/spark.png" width="100.8px" height="100.8px" preserveAspectRatio="xMinYMin meet" x="693.2" y="-158.15"/>
 <text xml:space="preserve" text-anchor="middle" x="743.6" y="-40.5" font-family="Sans-Serif" font-size="13.00" fill="#2d3436">analytics</text>
 </g>
-<!-- 3b65cb3f41a14bee94f5a6980cd76d16&#45;&gt;a6ec40dce33747669df3ae1c3b6f268b -->
+<!-- 6f517cfcbd6e491fa0bcb76c7972dbcb&#45;&gt;c708fddacbbb414d814011d419bbe355 -->
 <g id="edge13" class="edge">
-<title>3b65cb3f41a14bee94f5a6980cd76d16&#45;&gt;a6ec40dce33747669df3ae1c3b6f268b</title>
+<title>6f517cfcbd6e491fa0bcb76c7972dbcb&#45;&gt;c708fddacbbb414d814011d419bbe355</title>
 <path fill="none" stroke="black" stroke-width="2" d="M600.77,-107.75C600.77,-107.75 681.79,-107.75 681.79,-107.75"/>
 <polygon fill="black" stroke="black" stroke-width="2" points="680.27,-111.25 690.27,-107.75 680.27,-104.25 680.27,-111.25"/>
 </g>
