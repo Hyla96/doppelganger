@@ -15,6 +15,7 @@ OUTPUT_DIRECTORY = "diagrams"
 FILE_EXTENTION = "jpg"
 
 
+# List of all diagrams
 _GENERATORS = [
     HighLevelArchitectureDiagram(),
 ]
@@ -26,8 +27,6 @@ def main():
     diagrams_dir.mkdir(exist_ok=True)
 
     print("Generating diagrams...")
-
-    # List of all diagram generation functions
 
     # Generate each diagram
     for diagram in _GENERATORS:
