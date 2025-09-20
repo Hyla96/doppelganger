@@ -1,3 +1,9 @@
+<!--toc:start-->
+
+- [Architecture Diagrams](#architecture-diagrams)
+  - [Components Architecture](#components-architecture)
+  <!--toc:end-->
+
 ## Architecture Diagrams
 
 ### Components Architecture
