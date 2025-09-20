@@ -15,16 +15,16 @@ from diagrams.onprem.queue import Kafka
 from base_diagram import BaseDiagram
 
 
-class HighLevelArchitectureDiagram(BaseDiagram):
-    """High Level Architecture diagram implementation."""
+class TestDiagram(BaseDiagram):
+    """Test diagram implementation."""
 
     @property
     def name(self) -> str:
-        return "Advanced Web Service with On-Premises (colored)"
+        return "Test Diagram"
 
     @property
     def file_name(self) -> str:
-        return "advanced_web_service"
+        return "test_diagram"
 
     def generate(self) -> None:
         """Generate the high level architecture diagram."""

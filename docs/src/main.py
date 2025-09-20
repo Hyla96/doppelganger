@@ -3,7 +3,7 @@ Main script to generate all diagrams.
 Run with: uv run src/main.py
 """
 
-from diagram_generators.high_level_architecture import HighLevelArchitectureDiagram
+from diagram_generators.test_diagram import TestDiagram
 from diagrams import Diagram
 from pathlib import Path
 import sys
@@ -17,7 +17,7 @@ FILE_EXTENTION = "jpg"
 
 # List of all diagrams
 _GENERATORS = [
-    HighLevelArchitectureDiagram(),
+    TestDiagram(),
 ]
 
 
