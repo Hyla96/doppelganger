@@ -1,0 +1,52 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: example-service
+  namespace: doppelganger
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - doppelganger-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/v1"
+    rewrite:
+      uri: "/example-endpoint"
+    route:
+    - destination:
+        host: example-service-v1
+        port:
+          number: 80
+    mirror:
+      host: example-service-v2
+      port:
+        number: 80
+    mirrorPercentage:
+      value: 100.0
+  - match:
+    - uri:
+        prefix: "/v2"
+    rewrite:
+      uri: "/example-endpoint"
+    route:
+    - destination:
+        host: example-service-v2
+        port:
+          number: 80
+  - match:
+    - uri:
+        prefix: "/example-endpoint"
+    route:
+    - destination:
+        host: example-service-v1
+        port:
+          number: 80
+      weight: 100
+    mirror:
+      host: example-service-v2
+      port:
+        number: 80
+    mirrorPercentage:
+      value: 100.0

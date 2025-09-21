@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envoy-proxy
+  namespace: doppelganger
+  labels:
+    app: envoy-proxy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: envoy-proxy
+  template:
+    metadata:
+      labels:
+        app: envoy-proxy
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      containers:
+      - name: envoy
+        image: envoyproxy/envoy:v1.28-latest
+        ports:
+        - containerPort: 10000
+          name: http
+        - containerPort: 9901
+          name: admin
+        volumeMounts:
+        - name: envoy-config
+          mountPath: /etc/envoy
+          readOnly: true
+        command:
+        - /usr/local/bin/envoy
+        args:
+        - -c
+        - /etc/envoy/envoy.yaml
+        - --service-cluster
+        - envoy-proxy
+        - --service-node
+        - envoy-proxy
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        livenessProbe:
+          httpGet:
+            path: /ready
+            port: 9901
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 9901
+          initialDelaySeconds: 5
+          periodSeconds: 10
+      volumes:
+      - name: envoy-config
+        configMap:
+          name: envoy-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: envoy-proxy
+  namespace: doppelganger
+  labels:
+    app: envoy-proxy
+spec:
+  selector:
+    app: envoy-proxy
+  ports:
+  - name: http
+    port: 80
+    targetPort: 10000
+    protocol: TCP
+  - name: admin
+    port: 9901
+    targetPort: 9901
+    protocol: TCP
+  type: LoadBalancer

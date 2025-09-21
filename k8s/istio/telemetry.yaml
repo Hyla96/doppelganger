@@ -1,0 +1,29 @@
+apiVersion: telemetry.istio.io/v1alpha1
+kind: Telemetry
+metadata:
+  name: doppelganger-metrics
+  namespace: doppelganger
+spec:
+  metrics:
+  - providers:
+    - name: prometheus
+  - overrides:
+    - match:
+        metric: ALL_METRICS
+      tagOverrides:
+        request_id:
+          operation: UPSERT
+          value: "%REQ(x-request-id)%"
+        service_version:
+          operation: UPSERT
+          value: "%{CLUSTER_NAME}"
+---
+apiVersion: telemetry.istio.io/v1alpha1
+kind: Telemetry
+metadata:
+  name: doppelganger-tracing
+  namespace: doppelganger
+spec:
+  tracing:
+  - providers:
+    - name: jaeger
