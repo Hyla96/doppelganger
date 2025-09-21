@@ -27,7 +27,7 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func exampleHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Called exanple endpoint")
+	fmt.Printf("Called example endpoint\n")
 
 	time.Sleep(DelaySeconds * time.Second)
 
