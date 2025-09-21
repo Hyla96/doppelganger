@@ -31,6 +31,8 @@ reload:
 	make build
 	make load-images
 	make set-images
+	kubectl rollout restart deployment/example-service-v1 -n doppelganger
+	kubectl rollout restart deployment/example-service-v2 -n doppelganger
 
 port-forward:
 	kubectl port-forward -n doppelganger svc/envoy-proxy 8080:80 &
