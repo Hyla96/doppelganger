@@ -20,8 +20,7 @@ spec:
     spec:
       containers:
         - name: example-service
-          image: example-service-v2:v2
-          imagePullPolicy: Never
+          image: example-service-v2:latest
           ports:
             - containerPort: 3003
           env:
@@ -46,4 +45,3 @@ spec:
               port: 3003
             initialDelaySeconds: 5
             periodSeconds: 10
-
