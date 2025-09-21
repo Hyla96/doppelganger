@@ -11,7 +11,7 @@ import (
 
 const (
 	DefaultPort  = 3003
-	DelaySeconds = 1
+	DelaySeconds = 0
 )
 
 type Response struct {
@@ -60,4 +60,3 @@ func main() {
 		log.Fatal("Server failed to start:", err)
 	}
 }
-

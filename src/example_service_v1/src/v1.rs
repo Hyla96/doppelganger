@@ -6,7 +6,7 @@ use tokio::time::sleep;
 use warp::{reply, Filter, Reply};
 
 const DEFAULT_PORT: u16 = 3001;
-const DELAY_SECONDS: u64 = 1;
+const DELAY_SECONDS: u64 = 0;
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
