@@ -3,9 +3,11 @@ High Level Architecture diagram generator.
 """
 
 from diagrams import Cluster, Edge
+from diagrams.onprem.client import Client
 from diagrams.onprem.queue import Kafka
 from diagrams.onprem.database import PostgreSQL
 from diagrams.onprem.inmemory import Redis
+from diagrams.onprem.container import Docker
 from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.generic.compute import Rack
 from diagrams.generic.network import Router, Switch
@@ -26,40 +28,43 @@ class ComponentsArchitectureDiagram(BaseDiagram):
 
     def generate(self) -> None:
         """Generate the high level architecture diagram."""
-        client = Rack("Client")
-        server = Rack("Server")
 
-        inbound = Router("Inbound Gateway")
-        outbound = Router("Outbound Gateway")
-        replicator = Switch("Request Replicator")
+        with Cluster("Internet"):
+            client = Client("Client")
+            server = Rack("Server")
 
-        kafka = Kafka("Kafka")
-        redis = Redis("Redis")
+        with Cluster("Doppelganger"):
+            comparator = Rack("Behavior Comparator")
+            db = PostgreSQL("DB")
+            proxy = Router("Proxy")
+            grafana = Grafana("Dashboard")
+            kafka = Kafka("Kafka")
+            prometheus = Prometheus("Prometheus")
+            redis = Redis("Cache")
+            replicator = Switch("Request Replicator")
 
-        # Monitoring side
-        collector = Rack("Request Collector")
-        db = PostgreSQL("DB")
-        comparator = Rack("Behavior Comparator")
-        prometheus = Prometheus("Prometheus")
-        grafana = Grafana("Grafana")
+        with Cluster("Service"):
+            master = Docker("Master")
+            with Cluster("Shadows"):
+                shadow1 = Docker("Shadow 1")
+                shadowx = Docker("Shadow x")
 
-        # Flow left to right
-        client >> Edge(label="TCP") >> inbound >> replicator
+        proxy >> [
+            master,
+            kafka,
+        ]
+        proxy << master
+        replicator >> Edge() << shadowx
+        replicator >> Edge() << shadow1
 
-        with Cluster("<service>"):
-            master = Rack("Master")
-            shadow1 = Rack("Shadow 1")
-            shadowx = Rack("Shadow x")
+        shadow1 - Edge(style="dotted") - shadowx
 
-            replicator >> master
-            master >> outbound
-            master >> Edge(style="dotted") >> shadow1
-            shadow1 >> Edge(style="dotted") >> shadowx
+        client >> Edge(label="TCP") >> proxy
+        server << Edge(label="TCP") << proxy
 
-        outbound >> Edge(label="TCP") >> server
-        outbound >> redis
+        kafka >> replicator
 
-        # Kafka integration
-        inbound >> kafka
         replicator >> kafka
-        kafka >> collector >> db >> comparator >> prometheus >> grafana
+        replicator >> redis
+        comparator >> db
+        kafka >> comparator >> prometheus >> grafana
