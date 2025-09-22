@@ -21,6 +21,7 @@ spec:
       containers:
         - name: example-service
           image: example-service-v2:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3003
           env:
