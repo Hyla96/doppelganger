@@ -45,11 +45,19 @@ docker build -t example-service-v1:latest ./example_service_v1/
 echo "   Building Go service..."
 docker build -t example-service-v2:latest ./example_service_v2/
 
+echo "   Building Rust relay..."
+docker build -t relay:latest ./relay/
+
+echo "   Building Rust monitor..."
+docker build -t monitor:latest ./monitor/
+
 # Load images into kind cluster if using kind
 if kubectl config current-context | grep -q "kind"; then
   echo "   Loading images into kind cluster..."
   kind load docker-image example-service-v1:latest
   kind load docker-image example-service-v2:latest
+  kind load docker-image relay:latest
+  kind load docker-image monitor:latest
 fi
 
 # Load images into kind cluster if using minikube
@@ -57,9 +65,17 @@ if kubectl config current-context | grep -q "minikube"; then
   echo "   Loading images into minikube cluster..."
   minikube image load example-service-v1:latest
   minikube image load example-service-v2:latest
+  minikube image load relay:latest
+  minikube image load monitor:latest
 fi
 
 cd ../k8s
+
+echo "Deploying storage components..."
+kubectl apply -f storage/
+
+echo "Deploying Kafka..."
+kubectl apply -f deployments/kafka.yaml
 
 echo "Deploying services..."
 kubectl apply -f deployments/
@@ -69,11 +85,23 @@ echo "Configuring Istio service mesh..."
 kubectl apply -f istio/
 
 echo "Deploying Envoy proxy..."
-kubectl apply -f envoy/
+# Create ConfigMap from external YAML file (cleaner than YAML-in-YAML)
+kubectl create configmap envoy-config \
+  --from-file=envoy.yaml=envoy/envoy.yaml \
+  --namespace=doppelganger \
+  --dry-run=client \
+  --output=yaml | kubectl apply -f -
+
+kubectl apply -f envoy/envoy-deployment.yaml
 
 echo "Waiting for deployments to be ready..."
+kubectl wait --for=condition=available --timeout=60s deployment/postgres -n doppelganger
+kubectl wait --for=condition=available --timeout=60s deployment/redis -n doppelganger
+kubectl wait --for=condition=available --timeout=60s deployment/zookeeper -n doppelganger
+kubectl wait --for=condition=available --timeout=60s deployment/kafka -n doppelganger
 kubectl wait --for=condition=available --timeout=60s deployment/example-service-v1 -n doppelganger
 kubectl wait --for=condition=available --timeout=60s deployment/example-service-v2 -n doppelganger
+kubectl wait --for=condition=available --timeout=60s deployment/monitor-service -n doppelganger
 kubectl wait --for=condition=available --timeout=120s deployment/envoy-proxy -n doppelganger
 
 echo "Doppelganger setup complete!"
@@ -84,9 +112,9 @@ echo "   Istio Gateway: kubectl port-forward -n istio-system svc/istio-ingressga
 echo "   Envoy Admin: kubectl port-forward -n doppelganger svc/envoy-proxy 9901:9901"
 echo ""
 echo "Test endpoints:"
-echo "   curl http://localhost:8080/example-endpoint  # Primary + Mirror"
-echo "   curl http://localhost:8080/v1               # Rust service only"
-echo "   curl http://localhost:8080/v2               # Go service only"
+echo "   curl http://localhost:8080/example-endpoint  # Primary + Mirror to relay"
+echo "   curl http://localhost:8080/v1               # Primary + Mirror to relay"
+echo "   curl http://localhost:8080/v2               # Shadow service via relay"
 echo ""
 echo "Monitoring:"
 echo "   kubectl get pods -n doppelganger"

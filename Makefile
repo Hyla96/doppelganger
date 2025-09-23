@@ -18,10 +18,14 @@ k9s:
 build:
 	docker build -t example-service-v1:latest src/example_service_v1
 	docker build -t example-service-v2:latest src/example_service_v2
+	docker build -t relay:latest src/relay
+	docker build -t monitor:latest src/monitor
 
 load-images:
 	minikube image load example-service-v1:latest
 	minikube image load example-service-v2:latest
+	minikube image load relay:latest
+	minikube image load monitor:latest
 
 set-images:
 	kubectl set image deployment/example-service-v1 example-service=example-service-v1:latest -n doppelganger
@@ -30,11 +34,13 @@ set-images:
 reload:
 	make build
 	make load-images
-	make set-images
 	kubectl rollout restart deployment/example-service-v1 -n doppelganger
 	kubectl rollout restart deployment/example-service-v2 -n doppelganger
+	kubectl rollout restart deployment/monitor-service -n doppelganger
+	kubectl rollout restart deployment/kafka -n doppelganger
+	kubectl rollout restart deployment/zookeeper -n doppelganger
 
-port-forward:
+forward:
 	kubectl port-forward -n doppelganger svc/envoy-proxy 8080:80 &
 	kubectl port-forward -n istio-system svc/istio-ingressgateway 8081:80 &
 	kubectl port-forward -n doppelganger svc/envoy-proxy 9901:9901 &

@@ -43,7 +43,6 @@ spec:
         host: example-service-v1
         port:
           number: 80
-      weight: 100
     mirror:
       host: example-service-v2
       port:

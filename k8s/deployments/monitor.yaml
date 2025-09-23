@@ -1,44 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-service-v2
+  name: monitor-service
   namespace: doppelganger
   labels:
-    app: example-service-v2
-    version: v2
+    app: monitor-service
+    version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: example-service-v2
-      version: v2
+      app: monitor-service
+      version: v1
   template:
     metadata:
       labels:
-        app: example-service-v2
-        version: v2
+        app: monitor-service
+        version: v1
     spec:
       containers:
-        - name: example-service
-          image: example-service-v2:latest
+        - name: monitor
+          image: monitor:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3003
+            - containerPort: 9090
           env:
-            - name: PORT
-              value: "3003"
-        - name: relay-sidecar
-          image: relay:latest
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 8080
-          env:
-            - name: TARGET_SERVICE_URL
-              value: "http://localhost:3003"
-            - name: SERVICE_NAME
-              value: "example-service-v2"
             - name: RUST_LOG
-              value: "relay=debug"
+              value: "monitor=debug"
             - name: DATABASE_URL
               value: "postgresql://doppelganger:doppelganger_password@postgres.doppelganger.svc.cluster.local:5432/doppelganger"
             - name: REDIS_URL
@@ -47,20 +35,20 @@ spec:
               value: "kafka.doppelganger.svc.cluster.local:9092"
           resources:
             requests:
-              memory: "32Mi"
+              memory: "64Mi"
               cpu: "25m"
             limits:
-              memory: "64Mi"
+              memory: "128Mi"
               cpu: "50m"
           livenessProbe:
             httpGet:
               path: /health
-              port: 8080
+              port: 9090
             initialDelaySeconds: 10
             periodSeconds: 30
           readinessProbe:
             httpGet:
               path: /health
-              port: 8080
+              port: 9090
             initialDelaySeconds: 5
             periodSeconds: 10
