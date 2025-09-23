@@ -2,12 +2,13 @@ start:
 	minikube start
 	minikube addons enable ingress
 	cd k8s && ./setup.sh
+	make forward
 
 stop:
-	minikube stop
+	pkill -f "kubectl port-forward" 2>/dev/null || true
 	docker stop $$(docker ps -q --filter "ancestor=example-service-v1") 2>/dev/null || true
 	docker stop $$(docker ps -q --filter "ancestor=example-service-v2") 2>/dev/null || true
-	pkill -f "kubectl port-forward" 2>/dev/null || true
+	minikube stop
 
 setup:
 	cd k8s && ./setup.sh
@@ -44,8 +45,10 @@ forward:
 	kubectl port-forward -n doppelganger svc/envoy-proxy 8080:80 &
 	kubectl port-forward -n istio-system svc/istio-ingressgateway 8081:80 &
 	kubectl port-forward -n doppelganger svc/envoy-proxy 9901:9901 &
+	kubectl port-forward -n doppelganger svc/kafka-ui 8082:8080 &
 
 clean:
+	pkill -f "kubectl port-forward" 2>/dev/null || true
 	kubectl delete namespace doppelganger --ignore-not-found
 	minikube stop
 	minikube delete
