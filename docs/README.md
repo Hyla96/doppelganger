@@ -1,4 +1,10 @@
-# Setup
+# Docs
+
+The architectural diagrams are designed and generated with [Diagrams](https://github.com/mingrammer/diagrams), [here](https://diagrams.mingrammer.com/docs/getting-started/examples) the documentation
+
+## Content
+
+## Docs setup
 
 If running on MacOS install `graphviz`:
 

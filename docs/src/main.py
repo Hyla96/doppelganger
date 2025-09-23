@@ -3,8 +3,7 @@ Main script to generate all diagrams.
 Run with: uv run src/main.py
 """
 
-from diagram_generators.components_architecture import ComponentsArchitectureDiagram
-from diagram_generators.test_diagram import TestDiagram
+from diagram_generators.components_architecture import ComponentsArchitectureDiagram, SidecarRelayArchitectureDiagram
 from diagrams import Diagram
 from pathlib import Path
 import sys
@@ -18,8 +17,8 @@ FILE_EXTENTION = "jpg"
 
 # List of all diagrams
 _GENERATORS = [
-    TestDiagram(),
     ComponentsArchitectureDiagram(),
+    SidecarRelayArchitectureDiagram(),
 ]
 
 
